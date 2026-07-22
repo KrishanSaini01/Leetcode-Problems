@@ -4,11 +4,8 @@ public:
         int maxp =0;
         int bastbuy=prices[0];
         for(int i:prices){
-            if(bastbuy<i){
-                maxp=max(maxp,i-bastbuy);
-            }
             bastbuy=min(bastbuy,i);
-
+            maxp=max(maxp,i-bastbuy);
         }
         return maxp;
     }
